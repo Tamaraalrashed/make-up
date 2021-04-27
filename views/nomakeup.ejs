@@ -21,26 +21,14 @@
 
 
 <div>
-    <% makeup.forEach(element => {%>
-        <img src="<%=element.image %> " alt="">
-        <h4> <%=element.name %> </h4> 
-        <p><%=element.price %></p>
-
-        <form action="/product/<%=element.id %> " method="get">
-            <button>View Details</button>
-        </form>
-
-
-
-
-        <%  }); %>
-     
-   
+<h3>No Products in Your Card</h3>
 
 </div>
     </main>
     <footer>
 
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/app.js"></script>
 </body>
 </html>

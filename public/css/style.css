@@ -1,0 +1,19 @@
+div{
+	display: flex;
+	flex-direction: column;
+	width: auto;
+	flex-wrap: wrap;
+}
+
+button{
+	background-color: black;
+	color: blanchedalmond;
+}
+
+h1{
+	color: brown;
+}
+
+a{
+	text-decoration: none;
+}

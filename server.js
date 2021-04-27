@@ -75,7 +75,7 @@ let {image, name, price, description}=req.query;
 let SQL='INSERT INTO makeup (image, name, price, description) VALUES($1,$2,$3,$4) RETURNING *;';
 let values=[image, name, price, description];
 client.query(SQL,values)
-.then(()=>{
+.then((data)=>{
     res.redirect('/myCard')
 })
 }
@@ -85,7 +85,13 @@ function myCardHandler(req,res){
     let SQL='SELECT * FROM makeup;';
     client.query(SQL)
     .then((data)=>{
-        res.render('myCard', {makeup:data.rows})
+        if (data.rowCount>0){
+            res.render('myCard', {makeup:data.rows})   
+        }
+        else{
+            res.render('nomakeup');
+        }
+        
     })
     }
 
