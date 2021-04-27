@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make-up</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">home</a>
+            <a href="/allproducts">All products</a>
+            <a href="/myCard">home</a>
+        </nav>
+    </header>
+    <main>
+
+
+<div>
+    
+        <img src="<%=makeup.image %> " alt="">
+        <h4> <%=makeup.name %> </h4> 
+        <p><%=makeup.price %></p>
+        <p><%=makeup.description %></p>
+        <button id="updateBtn">Update</button>
+        <form action="/delete/<%=makeup.id %>?_method=delete " method="POST">
+            <button>Delete</button>
+        </form>
+
+        <form  id="form"  action="/update/<%=makeup.id %>?_method=put " method="POST">
+            <input type="text" name="image" value="<%=makeup.image %>">
+            <input type="text" name="name" value="<%=makeup.name %>">
+            <input type="text" name="price" value="<%=makeup.price %>">
+            <textarea name="description" id="" cols="30" rows="10" value="<%=makeup.description %>"><%=makeup.description %></textarea>
+            <button>Update</button>
+
+
+     
+   
+
+</div>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+</html>
